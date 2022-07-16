@@ -26,7 +26,7 @@ function Contact() {
           value={email}
           placeholder="wprowadź e-mail"
           autoFocus
-          onChange={(event) => setEmail(event.target.value)}
+          onChange={({target}) => setEmail(target.value)}
         />
         <h4>Wiadomość</h4>
         <textarea
@@ -34,7 +34,7 @@ function Contact() {
           value={message}
           placeholder="wpisz treść wiadomości"
           rows={10}
-          onChange={(event) => setMessage(event.target.value)}
+          onChange={({target}) => setMessage(target.value)}
         />
         <button>Wyślij</button>
       </form>
