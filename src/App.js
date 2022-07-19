@@ -14,34 +14,34 @@ const imageAddress =
 function App() {
   const [logoText, setLogoText] = useState("");
   const [newLogoText, setNewLogoText] = useState("Logo")
-  const [showAboutMe, setShowAboutMe] = useState(false);
+  const [showAboutMe, setShowAboutMe] = useState(true);
   const [showCharacters, setShowCharacters] = useState(false);
   const [showTodo, setShowTodo] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
   const displayAboutMe = () => {
-    setShowAboutMe(!showAboutMe);
+    setShowAboutMe(true);
     setShowCharacters(false);
     setShowTodo(false);
     setShowContact(false);
   };
 
   const displayCharacters = () => {
-    setShowCharacters(!showCharacters);
+    setShowCharacters(true);
     setShowAboutMe(false);
     setShowTodo(false);
     setShowContact(false);
   };
 
   const displayTodo = () => {
-    setShowTodo(!showTodo);
+    setShowTodo(true);
     setShowCharacters(false);
     setShowAboutMe(false);
     setShowContact(false);
   };
 
   const displayContact = () => {
-    setShowContact(!showContact);
+    setShowContact(true);
     setShowCharacters(false);
     setShowTodo(false);
     setShowAboutMe(false);
