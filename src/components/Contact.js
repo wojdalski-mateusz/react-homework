@@ -39,10 +39,10 @@ function Contact() {
         <button>Wyślij</button>
       </form>
       <div>
-        {list.map((a) => (
+        {list.map(({email, message}) => (
           <div className="user-input-area">
-            <p>E-mail: {a.email}</p>
-            <p>Wiadomość: {a.message}</p>
+            <p>E-mail: {email}</p>
+            <p>Wiadomość: {message}</p>
           </div>
         ))}
       </div>

@@ -17,15 +17,15 @@ function Characters() {
 
   return (
     <>
-<h1>Rick&Morty</h1>
-<h2>Characters</h2>      
-<div className="characters-container">
-        {characters.map((character) => (
+      <h1>Rick&Morty</h1>
+      <h2>Characters</h2>
+      <div className="characters-container">
+        {characters.map(({ image, name, species, status }) => (
           <div className="character-card">
-            <img src={character.image} alt={character.name + " - photo"} />
-            <p>Imię: {character.name}</p>
-            <p>Gatunek: {character.species}</p>
-            <p>Status: {character.status}</p>
+            <img src={image} alt={name + " - photo"} />
+            <p>Imię: {name}</p>
+            <p>Gatunek: {species}</p>
+            <p>Status: {status}</p>
           </div>
         ))}
       </div>
