@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-const Todo = ({ newLogoText, setNewLogoText}) => {
+const Todo = ({ newLogoText, setNewLogoText }) => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
@@ -21,6 +21,10 @@ const Todo = ({ newLogoText, setNewLogoText}) => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+
+    if (newTask === "") {
+      return;
+    }
     addNewTask(newTask);
     setNewTask("");
   };
@@ -39,12 +43,16 @@ const Todo = ({ newLogoText, setNewLogoText}) => {
             value={newTask}
             onChange={({ target }) => setNewTask(target.value)}
           />
-          <Button text={"Dodaj"}/>
+          <Button text={"Dodaj"} />
         </form>
         <div className="tasks-list">
           {tasks.map(({ id, content }) => (
             <li key={id} className="task">
-              <Button className={"task"} onClick={() => removeTask(id)} text={content} />
+              <Button
+                className={"task"}
+                onClick={() => removeTask(id)}
+                text={content}
+              />
             </li>
           ))}
         </div>
@@ -56,6 +64,6 @@ const Todo = ({ newLogoText, setNewLogoText}) => {
       />
     </div>
   );
-}
+};
 
 export default Todo;
