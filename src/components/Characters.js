@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 
+const BASE_URL = "https://rickandmortyapi.com/api/character";
+
 function Characters() {
   const [characters, setCharacters] = useState([{}]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("https://rickandmortyapi.com/api/character");
+      const response = await fetch(BASE_URL);
       const data = await response.json();
       const characters = data.results;
       setCharacters(characters);
