@@ -7,10 +7,19 @@ function Characters() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(BASE_URL);
-      const data = await response.json();
-      const characters = data.results;
-      setCharacters(characters);
+      try {
+        const response = await fetch(BASE_URL);
+
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+
+        const data = await response.json();
+        const characters = data.results;
+        setCharacters(characters);
+      } catch (error) {
+        console.error(error);
+      }
     };
     fetchData();
   }, []);
