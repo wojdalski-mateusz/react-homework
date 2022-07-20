@@ -1,11 +1,11 @@
 import Button from "./Button";
 
-const AboutMe = ({src, alt, name, description, logoText, setLogoText, setNewLogoText}) => {
+const AboutMe = ({src, alt, name, description, logoText, setLogoText, setNewLogoText, newLogoText}) => {
 
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setNewLogoText(logoText)
+    setNewLogoText(newLogoText+logoText)
     setLogoText("")
   };
 
@@ -23,10 +23,10 @@ const AboutMe = ({src, alt, name, description, logoText, setLogoText, setNewLogo
             <input
               type="text"
               value={logoText}
-              placeholder={"wprowadź nowe logo"}
+              placeholder={"dodaj tekst do logo"}
               onChange={(event) => changeLogo(event)}
             />
-            <Button type="submit" onClick={handleSubmit} text={"Dodaj do logo"} />
+            <Button type="submit" onClick={handleSubmit} text={"Dodaj"} />
           </form>
         </div>
       </>

@@ -66,6 +66,7 @@ const App = () => {
             name={name}
             description={description}
             logoText={logoText}
+            newLogoText={newLogoText}
             setLogoText={setLogoText}
             setNewLogoText={setNewLogoText}
           />
