@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const BASE_URL = "https://rickandmortyapi.com/api/character";
 
-function Characters() {
+const Characters = () => {
   const [characters, setCharacters] = useState([{}]);
 
   useEffect(() => {

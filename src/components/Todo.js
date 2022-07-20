@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-function Todo({ newLogoText, setNewLogoText}) {
+const Todo = ({ newLogoText, setNewLogoText}) => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 

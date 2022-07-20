@@ -1,4 +1,4 @@
-function AboutMe({src, alt, name, description, logoText, setLogoText, setNewLogoText}) {
+const AboutMe = ({src, alt, name, description, logoText, setLogoText, setNewLogoText}) => {
 
 
   const handleSubmit = (event) => {

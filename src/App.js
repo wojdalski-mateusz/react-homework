@@ -11,7 +11,7 @@ const description =
 const imageAddress =
   "https://media.istockphoto.com/photos/lifework-balance-and-city-living-lifestyle-concept-of-business-man-picture-id1183657530";
 
-function App() {
+const App = () => {
   const [logoText, setLogoText] = useState("");
   const [newLogoText, setNewLogoText] = useState("Logo")
   const [showAboutMe, setShowAboutMe] = useState(true);

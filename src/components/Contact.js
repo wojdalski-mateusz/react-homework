@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Contact() {
+const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [list, setList] = useState([]);
