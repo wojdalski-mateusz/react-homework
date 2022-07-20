@@ -64,6 +64,12 @@ img {
   word-wrap: break-word;
 }
 
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .task {
   list-style: none;
   padding: 0px;
