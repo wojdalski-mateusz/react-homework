@@ -35,6 +35,7 @@ const Contact = () => {
           value={message}
           placeholder="wpisz treść wiadomości"
           rows={10}
+          required
           onChange={({target}) => setMessage(target.value)}
         />
         <Button text={"Wyślij"} />
