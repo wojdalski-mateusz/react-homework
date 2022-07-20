@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -36,7 +37,7 @@ const Contact = () => {
           rows={10}
           onChange={({target}) => setMessage(target.value)}
         />
-        <button>Wyślij</button>
+        <Button text={"Wyślij"} />
       </form>
       <div>
         {list.map(({email, message}) => (

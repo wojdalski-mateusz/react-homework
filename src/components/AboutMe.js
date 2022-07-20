@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const AboutMe = ({src, alt, name, description, logoText, setLogoText, setNewLogoText}) => {
 
 
@@ -24,9 +26,7 @@ const AboutMe = ({src, alt, name, description, logoText, setLogoText, setNewLogo
               placeholder={"wprowadź nowe logo"}
               onChange={(event) => changeLogo(event)}
             />
-            <button type="submit" onClick={handleSubmit}>
-              Zmień logo
-            </button>
+            <Button type="submit" onClick={handleSubmit} text={"Dodaj do logo"} />
           </form>
         </div>
       </>

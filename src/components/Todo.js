@@ -39,14 +39,12 @@ const Todo = ({ newLogoText, setNewLogoText}) => {
             value={newTask}
             onChange={({ target }) => setNewTask(target.value)}
           />
-          <button>Dodaj</button>
+          <Button text={"Dodaj"}/>
         </form>
         <div className="tasks-list">
           {tasks.map(({ id, content }) => (
             <li key={id} className="task">
-              <button className="task" onClick={() => removeTask(id)}>
-                {content}
-              </button>
+              <Button className={"task"} onClick={() => removeTask(id)} text={content} />
             </li>
           ))}
         </div>
