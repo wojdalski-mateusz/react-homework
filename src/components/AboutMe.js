@@ -10,25 +10,19 @@ const AboutMe = ({
   setNewLogoText,
   newLogoText,
 }) => {
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   setNewLogoText(newLogoText + logoText);
-  //   setLogoText("");
-  // };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const updatedLogoText = newLogoText + logoText;
 
-    if(updatedLogoText.length > 20) {
+    if (updatedLogoText.length > 20) {
       window.alert("Logo text shouldn't exceed more than 20 characters");
-      setNewLogoText(newLogoText)
-      setLogoText("")
+      setNewLogoText(newLogoText);
+      setLogoText("");
       return;
     }
 
-    setNewLogoText(updatedLogoText)
-    setLogoText("")
+    setNewLogoText(updatedLogoText);
+    setLogoText("");
   };
 
   const changeLogo = (event) => {
