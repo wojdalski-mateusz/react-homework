@@ -29,6 +29,15 @@ const Todo = ({ newLogoText, setNewLogoText }) => {
     setNewTask("");
   };
 
+  const fillTaskContent = (event) => {
+    const userInputContent = event.target.value;
+    if (userInputContent.length > 40){
+      window.alert("User task's content shouldn't exceed 40 characters");
+      return;
+    }
+    setNewTask(userInputContent)
+  };
+
   const changeLogo = () => {
     setNewLogoText(newLogoText === "Logo" ? "Nowe Logo" : "Logo");
   };
@@ -41,7 +50,7 @@ const Todo = ({ newLogoText, setNewLogoText }) => {
           <input
             placeholder="wpisz treść"
             value={newTask}
-            onChange={({ target }) => setNewTask(target.value)}
+            onChange={(event) => fillTaskContent(event)}
           />
           <Button text={"Dodaj"} />
         </form>
