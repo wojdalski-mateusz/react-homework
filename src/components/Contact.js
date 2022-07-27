@@ -27,6 +27,7 @@ const Contact = () => {
           value={email}
           placeholder="wprowadź e-mail"
           autoFocus
+          required
           onChange={({target}) => setEmail(target.value)}
         />
         <h4>Wiadomość</h4>
