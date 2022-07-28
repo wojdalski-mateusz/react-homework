@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./Button";
+import Button from "./Button/index";
 
 const Contact = () => {
   const [email, setEmail] = useState("");

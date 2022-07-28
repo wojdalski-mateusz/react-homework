@@ -3,7 +3,8 @@ import AboutMe from "./components/AboutMe";
 import Characters from "./components/Characters/index";
 import Todo from "./components/Todo";
 import Contact from "./components/Contact";
-import Button from "./components/Button";
+import Button from "./components/Button/index";
+import * as S from "./styles"
 
 const name = "Mateusz Wojdalski";
 const description =
@@ -21,20 +22,26 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <div className="Navbar">
+    <S.MainWrapper>
+      <S.Navbar>
         <div>{newLogoText}</div>
-        <div className="Buttons">
-          <Button onClick={() => displayPage("AboutMe")} text={"O mnie"} />
+        <div>
+          <Button
+            onClick={() => displayPage("AboutMe")}
+            text={"O mnie"}
+          />
           <Button
             onClick={() => displayPage("Characters")}
             text={"Lista postaci"}
           />
           <Button onClick={() => displayPage("Todo")} text={"Todo"} />
-          <Button onClick={() => displayPage("Contact")} text={"Kontakt"} />
+          <Button
+            onClick={() => displayPage("Contact")}
+            text={"Kontakt"}
+          />
         </div>
-      </div>
-      <div className="Content">
+      </S.Navbar>
+      <S.Content>
         {showContent === "AboutMe" && (
           <AboutMe
             src={imageAddress}
@@ -52,8 +59,8 @@ const App = () => {
           <Todo newLogoText={newLogoText} setNewLogoText={setNewLogoText} />
         )}
         {showContent === "Contact" && <Contact />}
-      </div>
-    </div>
+      </S.Content>
+    </S.MainWrapper>
   );
 };
 
