@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Button from "./Button/index";
+import Button from "../Button/index";
+import * as S from "./styles";
 
 const Todo = ({ newLogoText, setNewLogoText }) => {
   const [tasks, setTasks] = useState([]);
@@ -31,11 +32,11 @@ const Todo = ({ newLogoText, setNewLogoText }) => {
 
   const fillTaskContent = (event) => {
     const userInputContent = event.target.value;
-    if (userInputContent.length > 40){
+    if (userInputContent.length > 40) {
       window.alert("User task's content shouldn't exceed 40 characters");
       return;
     }
-    setNewTask(userInputContent)
+    setNewTask(userInputContent);
   };
 
   const changeLogo = () => {
@@ -43,9 +44,9 @@ const Todo = ({ newLogoText, setNewLogoText }) => {
   };
 
   return (
-    <div className="todo-list-container">
+    <S.TodoWrapper>
       <h1>Todo List</h1>
-      <div className="todo-list">
+      <S.TodoList>
         <form onSubmit={onFormSubmit}>
           <input
             placeholder="wpisz treść"
@@ -54,24 +55,24 @@ const Todo = ({ newLogoText, setNewLogoText }) => {
           />
           <Button text={"Dodaj"} />
         </form>
-        <div className="tasks-list">
+        <S.Tasks>
           {tasks.map(({ id, content }) => (
-            <li key={id} className="task">
+            <S.Task key={id}>
               <Button
                 className={"task"}
                 onClick={() => removeTask(id)}
                 text={content}
               />
-            </li>
+            </S.Task>
           ))}
-        </div>
-      </div>
+        </S.Tasks>
+      </S.TodoList>
       <Button
         onClick={changeLogo}
         className={"logo-button"}
         text={"Zmień logo"}
       />
-    </div>
+    </S.TodoWrapper>
   );
 };
 

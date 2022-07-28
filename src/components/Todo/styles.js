@@ -1,11 +1,13 @@
-.todo-list-container {
+import styled from "styled-components";
+
+export const TodoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+`;
 
-.todo-list {
+export const TodoList = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -14,15 +16,15 @@
   max-width: 350px;
   margin-top: 30px;
   word-wrap: break-word;
-}
+`;
 
-.tasks-list {
+export const Tasks = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+`;
 
-.task {
+export const Task = styled.li`
   list-style: none;
   padding: 0px;
   font-size: 20px;
@@ -33,8 +35,4 @@
   align-items: center;
   border: none;
   background: none;
-}
-
-ol {
-  display: contents;
-}
+`;
