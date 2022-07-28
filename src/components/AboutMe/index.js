@@ -1,4 +1,5 @@
-import Button from "./Button/index";
+import Button from "../Button/index";
+import * as S from "./styles";
 
 const AboutMe = ({
   src,
@@ -37,9 +38,9 @@ const AboutMe = ({
 
   return (
     <>
-      <img className="myImage" src={src} alt={alt} />
-      <div className="name">{name}</div>
-      <p className="aboutMe-text">{description}</p>
+      <S.MyImage src={src} alt={alt} />
+      <S.MyName>{name}</S.MyName>
+      <S.AboutMeText>{description}</S.AboutMeText>
       <div>
         <form onSubmit={(event) => handleSubmit(event)}>
           <input

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AboutMe from "./components/AboutMe";
+import AboutMe from "./components/AboutMe/index";
 import Characters from "./components/Characters/index";
 import Todo from "./components/Todo";
 import Contact from "./components/Contact/index";
