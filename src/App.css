@@ -27,11 +27,11 @@
   cursor: pointer;
 }
 
-img {
+/* img {
   max-height: 300px;
   max-width: 300px;
   margin-top: 20px;
-}
+} */
 
 .name {
   font-size: 30px;
@@ -111,23 +111,4 @@ ol {
 
 .contact-form button {
   margin-top: 20px;
-}
-
-.characters-container {
-  columns: 4 auto;
-}
-
-.characters-container img {
-  height: 150px;
-  width: 150px;
-}
-
-.character-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-  background-color: rgb(0, 0, 0);
-  color: white;
 }

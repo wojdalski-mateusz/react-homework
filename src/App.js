@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AboutMe from "./components/AboutMe";
-import Characters from "./components/Characters";
+import Characters from "./components/Characters/index";
 import Todo from "./components/Todo";
 import Contact from "./components/Contact";
 import Button from "./components/Button";
