@@ -2,7 +2,7 @@ import { useState } from "react";
 import AboutMe from "./components/AboutMe";
 import Characters from "./components/Characters/index";
 import Todo from "./components/Todo";
-import Contact from "./components/Contact";
+import Contact from "./components/Contact/index";
 import Button from "./components/Button/index";
 import * as S from "./styles"
 
