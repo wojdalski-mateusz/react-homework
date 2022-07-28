@@ -1,37 +1,8 @@
-.App {
-  margin: 50px 100px;
-}
-
-.Navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: orange;
-  padding: 25px;
-  border-radius: 5px;
-}
-
-.Content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: purple;
-  border-radius: 5px;
-  min-height: 800px;
-}
-
-.Buttons button {
-  margin-left: 10px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-/* img {
+img {
   max-height: 300px;
   max-width: 300px;
   margin-top: 20px;
-} */
+}
 
 .name {
   font-size: 30px;
@@ -40,10 +11,6 @@
 
 .aboutMe-text {
   max-width: 800px;
-}
-
-.update-logo-button {
-  margin-top: 30px;
 }
 
 .todo-list-container {
@@ -87,10 +54,6 @@ ol {
   display: contents;
 }
 
-.logo-button {
-  margin-top: 50px;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -107,8 +70,4 @@ ol {
   max-width: 350px;
   margin-top: 20px;
   word-wrap: break-word;
-}
-
-.contact-form button {
-  margin-top: 20px;
 }
