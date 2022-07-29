@@ -4,7 +4,8 @@ import Characters from "./components/Characters/index";
 import Todo from "./components/Todo";
 import Contact from "./components/Contact/index";
 import Button from "./components/Button/index";
-import * as S from "./styles"
+import * as S from "./styles";
+import Dialog from "./components/Dialog";
 
 const name = "Mateusz Wojdalski";
 const description =
@@ -26,19 +27,14 @@ const App = () => {
       <S.Navbar>
         <div>{newLogoText}</div>
         <div>
-          <Button
-            onClick={() => displayPage("AboutMe")}
-            text={"O mnie"}
-          />
+          <Button onClick={() => displayPage("AboutMe")} text={"O mnie"} />
           <Button
             onClick={() => displayPage("Characters")}
             text={"Lista postaci"}
           />
           <Button onClick={() => displayPage("Todo")} text={"Todo"} />
-          <Button
-            onClick={() => displayPage("Contact")}
-            text={"Kontakt"}
-          />
+          <Button onClick={() => displayPage("Contact")} text={"Kontakt"} />
+          <Button onClick={() => displayPage("Dialog")} text={"Dialog"} />
         </div>
       </S.Navbar>
       <S.Content>
@@ -59,6 +55,7 @@ const App = () => {
           <Todo newLogoText={newLogoText} setNewLogoText={setNewLogoText} />
         )}
         {showContent === "Contact" && <Contact />}
+        {showContent === "Dialog" && <Dialog />}
       </S.Content>
     </S.MainWrapper>
   );

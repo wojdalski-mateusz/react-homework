@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 export const MainWrapper = styled.div`
   margin: 50px 100px;
