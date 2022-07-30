@@ -7,6 +7,7 @@ import Button from "./components/Button/index";
 import * as S from "./styles";
 import Dialog from "./components/Dialog";
 import Components from "./components/ComponentsPage"
+import Footer from "./components/Footer";
 
 const name = "Mateusz Wojdalski";
 const description =
@@ -36,7 +37,10 @@ const App = () => {
           <Button onClick={() => displayPage("Todo")} text={"Todo"} />
           <Button onClick={() => displayPage("Contact")} text={"Kontakt"} />
           <Button onClick={() => displayPage("Dialog")} text={"Dialog"} />
-          <Button onClick={() => displayPage("Components")} text={"Components"} />
+          <Button
+            onClick={() => displayPage("Components")}
+            text={"Components"}
+          />
         </div>
       </S.Navbar>
       <S.Content>
@@ -60,6 +64,7 @@ const App = () => {
         {showContent === "Dialog" && <Dialog />}
         {showContent === "Components" && <Components />}
       </S.Content>
+        <Footer/>
     </S.MainWrapper>
   );
 };
