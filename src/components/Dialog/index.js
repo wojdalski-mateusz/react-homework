@@ -50,7 +50,7 @@ const DialogSelect = () => {
 
   return (
     <div>
-      <Button onClick={handleClickOpen}>Open select dialog</Button>
+      <Button onClick={handleClickOpen} sx={{color: "black"}}>Open select dialog</Button>
       <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
         <DialogTitle>Fill the form</DialogTitle>
         <DialogContent>
@@ -58,7 +58,6 @@ const DialogSelect = () => {
             <FormControl sx={{ m: 1, minWidth: 120 }}>
               <InputLabel htmlFor="demo-dialog-native">Technology</InputLabel>
               <Select
-                required
                 native
                 value={technology}
                 onChange={handleTechnology}
