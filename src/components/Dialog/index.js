@@ -51,7 +51,7 @@ const DialogSelect = () => {
   };
 
   return (
-    <div>
+    <>
       <Button onClick={handleClickOpen} sx={{ color: "black" }}>
         Open select dialog
       </Button>
@@ -99,9 +99,8 @@ const DialogSelect = () => {
           <Button onClick={handleClose}>Close</Button>
           <Button onClick={handleOk}>Ok</Button>
         </DialogActions>
-        {/* <span>{showChoice}</span> */}
       </Dialog>
-    </div>
+    </>
   );
 };
 
