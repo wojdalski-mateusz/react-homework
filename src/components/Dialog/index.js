@@ -1,15 +1,17 @@
 import { useState } from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogTitle from "@mui/material/DialogTitle";
-import InputLabel from "@mui/material/InputLabel";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  InputLabel,
+  OutlinedInput,
+  MenuItem,
+  FormControl,
+  Select,
+} from "@mui/material";
 import * as S from "./styles";
 
 const DialogSelect = () => {
@@ -39,18 +41,20 @@ const DialogSelect = () => {
 
   const handleOk = (event, reason) => {
     if (reason !== "backdropClick") {
-        if (technology !== "" && seniority !== ""){
-            setShowChoice(`Options selected: ${technology} - ${seniority}`);
-            setTechnology("");
-            setSeniority("");
-        }
-      return
+      if (technology !== "" && seniority !== "") {
+        setShowChoice(`Options selected: ${technology} - ${seniority}`);
+        setTechnology("");
+        setSeniority("");
+      }
+      return;
     }
   };
 
   return (
     <div>
-      <Button onClick={handleClickOpen} sx={{color: "black"}}>Open select dialog</Button>
+      <Button onClick={handleClickOpen} sx={{ color: "black" }}>
+        Open select dialog
+      </Button>
       <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
         <DialogTitle>Fill the form</DialogTitle>
         <DialogContent>
